@@ -1,0 +1,747 @@
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 1; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 2; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 3; ]
+using Toybox.System as :Sys;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 4; ]
+using Toybox.Lang as :Lang;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 5; ]
+using Toybox.Application as :App;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 6; ]
+using Toybox.Math as :Math;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 7; ]
+using Toybox.Time.Gregorian as :Calendar;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 9; ]
+class DigilogueView extends Ui.WatchFace{
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 11; @position = 16; ]
+    private
+    var isAwake;
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 12; @position = 16; ]
+    private
+    var fontLT;
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 13; @position = 16; ]
+    private
+    var fontS;
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 14; @position = 16; ]
+    private
+    var icons;
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 16; ]
+    function initialize() as Void {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_16_26_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 17 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 18 5 ]
+        %tmp.4 = true;
+        putv self :isAwake %tmp.4;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_16_26_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 22; ]
+    function onLayout(dc) {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_22_26_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 23 5 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Fonts;
+        %tmp.6 = getv %tmp.5 :id_font_CaviarDreams;
+        %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+        putv self :fontS %tmp.7;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 24 5 ]
+        %tmp.8 = getm $.Toybox.WatchUi;
+        %tmp.9 = getv function %tmp.8 :loadResource;
+        %tmp.11 = getv ? :Rez;
+        %tmp.12 = getv %tmp.11 :Fonts;
+        %tmp.13 = getv %tmp.12 :id_font_CaviarDreams_LThin;
+        %tmp.14 = invoke %tmp.8 %tmp.9(%tmp.13);
+        putv self :fontLT %tmp.14;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 25 5 ]
+        %tmp.15 = getm $.Toybox.WatchUi;
+        %tmp.16 = getv function %tmp.15 :loadResource;
+        %tmp.18 = getv ? :Rez;
+        %tmp.19 = getv %tmp.18 :Fonts;
+        %tmp.20 = getv %tmp.19 :id_font_icons;
+        %tmp.21 = invoke %tmp.15 %tmp.16(%tmp.20);
+        putv self :icons %tmp.21;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_22_26_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 28; ]
+    function onShow() {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 32; ]
+    function onUpdate(dc) {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 33 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %clockTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 34 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %radius.2 = local;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getWidth;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = 2;
+        %tmp.8 = div %tmp.6 %tmp.7;
+        lputv %radius.2 %tmp.8;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 36 2 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %date.3 = local;
+        %tmp.9 = getm $.Toybox.Time.Gregorian;
+        %tmp.10 = getv function %tmp.9 :info;
+        %tmp.12 = getv ? :Time;
+        %tmp.13 = getv function %tmp.12 :now;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.16 = getv ? :Time;
+        %tmp.17 = getv %tmp.16 :FORMAT_LONG;
+        %tmp.18 = invoke %tmp.9 %tmp.10(%tmp.14, %tmp.17);
+        lputv %date.3 %tmp.18;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 37 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %battery.4 = local;
+        %tmp.19 = getm $.Toybox.System;
+        %tmp.20 = getv function %tmp.19 :getSystemStats;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        %tmp.22 = getv %tmp.21 :battery;
+        lputv %battery.4 %tmp.22;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 38 3 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %batteryStr.5 = local;
+        %tmp.23 = getm $.Toybox.Lang;
+        %tmp.24 = getv function %tmp.23 :format;
+        %tmp.25 = "$1$%";
+        %tmp.26 = newa 1;
+        %tmp.27 = lgetv %battery.4;
+        %tmp.28 = getv function %tmp.27 :format;
+        %tmp.29 = "%02d";
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        %tmp.31 = dup %tmp.26;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        %tmp.33 = invoke %tmp.23 %tmp.24(%tmp.25, %tmp.32);
+        lputv %batteryStr.5 %tmp.33;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 39 2 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %hourStr.6 = local;
+        %tmp.34 = getm $.Toybox.Lang;
+        %tmp.35 = getv function %tmp.34 :format;
+        %tmp.36 = "$1$";
+        %tmp.37 = newa 1;
+        %tmp.38 = lgetv %date.3;
+        %tmp.39 = getv %tmp.38 :hour;
+        %tmp.40 = dup %tmp.37;
+        %tmp.41 = aputv %tmp.40 0 %tmp.39;
+        %tmp.42 = invoke %tmp.34 %tmp.35(%tmp.36, %tmp.41);
+        lputv %hourStr.6 %tmp.42;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 41 2 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %timeMin.7 = local;
+        %tmp.43 = lgetv %clockTime.1;
+        %tmp.44 = getv %tmp.43 :min;
+        lputv %timeMin.7 %tmp.44;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 42 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %timeSec.8 = local;
+        %tmp.45 = lgetv %clockTime.1;
+        %tmp.46 = getv %tmp.45 :sec;
+        lputv %timeSec.8 %tmp.46;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 43 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %lengthMin.9 = local;
+        %tmp.48 = lgetv %radius.2;
+        %tmp.49 = 1.5;
+        %tmp.50 = div %tmp.48 %tmp.49;
+        lputv %lengthMin.9 %tmp.50;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 44 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %lengthSec.10 = local;
+        %tmp.52 = lgetv %radius.2;
+        %tmp.53 = 1.5;
+        %tmp.54 = div %tmp.52 %tmp.53;
+        lputv %lengthSec.10 %tmp.54;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 45 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %widthMin.11 = local;
+        %tmp.56 = lgetv %radius.2;
+        %tmp.57 = 22;
+        %tmp.58 = div %tmp.56 %tmp.57;
+        lputv %widthMin.11 %tmp.58;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 46 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %widthSec.12 = local;
+        %tmp.60 = lgetv %radius.2;
+        %tmp.61 = 40;
+        %tmp.62 = div %tmp.60 %tmp.61;
+        lputv %widthSec.12 %tmp.62;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 47 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %colorMin.13 = local;
+        %tmp.63 = getm $.Toybox.Application;
+        %tmp.64 = getv function %tmp.63 :getApp;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        %tmp.66 = getv function %tmp.65 :getProperty;
+        %tmp.67 = "MinHandColor";
+        %tmp.68 = invoke %tmp.65 %tmp.66(%tmp.67);
+        lputv %colorMin.13 %tmp.68;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 48 6 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %colorSec.14 = local;
+        %tmp.69 = getm $.Toybox.Application;
+        %tmp.70 = getv function %tmp.69 :getApp;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        %tmp.72 = getv function %tmp.71 :getProperty;
+        %tmp.73 = "SecHandColor";
+        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
+        lputv %colorSec.14 %tmp.74;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 50 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks5r1.15 = local;
+        %tmp.76 = lgetv %radius.2;
+        %tmp.77 = 15;
+        %tmp.78 = sub %tmp.76 %tmp.77;
+        lputv %marks5r1.15 %tmp.78;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 51 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks5r2.16 = local;
+        %tmp.80 = lgetv %radius.2;
+        lputv %marks5r2.16 %tmp.80;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 52 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks5thick.17 = local;
+        %tmp.81 = 0.02;
+        lputv %marks5thick.17 %tmp.81;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 53 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks5comp.18 = local;
+        %tmp.82 = 12;
+        %tmp.83 = getm $.Toybox.Math;
+        %tmp.84 = getv %tmp.83 :PI;
+        %tmp.85 = mul %tmp.82 %tmp.84;
+        %tmp.86 = 6;
+        %tmp.87 = div %tmp.85 %tmp.86;
+        lputv %marks5comp.18 %tmp.87;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 54 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks5add.19 = local;
+        %tmp.88 = getm $.Toybox.Math;
+        %tmp.89 = getv %tmp.88 :PI;
+        %tmp.90 = 6;
+        %tmp.91 = div %tmp.89 %tmp.90;
+        lputv %marks5add.19 %tmp.91;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 55 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks1r1.20 = local;
+        %tmp.93 = lgetv %radius.2;
+        %tmp.94 = 10;
+        %tmp.95 = sub %tmp.93 %tmp.94;
+        lputv %marks1r1.20 %tmp.95;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 56 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks1r2.21 = local;
+        %tmp.97 = lgetv %radius.2;
+        lputv %marks1r2.21 %tmp.97;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 57 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks1thick.22 = local;
+        %tmp.98 = 0.003;
+        lputv %marks1thick.22 %tmp.98;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 58 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks1comp.23 = local;
+        %tmp.99 = 13;
+        %tmp.100 = getm $.Toybox.Math;
+        %tmp.101 = getv %tmp.100 :PI;
+        %tmp.102 = mul %tmp.99 %tmp.101;
+        %tmp.103 = 6;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        lputv %marks1comp.23 %tmp.104;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 59 5 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %marks1add.24 = local;
+        %tmp.105 = getm $.Toybox.Math;
+        %tmp.106 = getv %tmp.105 :PI;
+        %tmp.107 = 30;
+        %tmp.108 = div %tmp.106 %tmp.107;
+        lputv %marks1add.24 %tmp.108;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 62 8 ]
+        %tmp.109 = lgetv %dc;
+        %tmp.110 = getv function %tmp.109 :setColor;
+        %tmp.111 = getm $.Toybox.Graphics;
+        %tmp.112 = getv %tmp.111 :COLOR_TRANSPARENT;
+        %tmp.113 = getm $.Toybox.Application;
+        %tmp.114 = getv function %tmp.113 :getApp;
+        %tmp.115 = invoke %tmp.113 %tmp.114();
+        %tmp.116 = getv function %tmp.115 :getProperty;
+        %tmp.117 = "BackgroundColor";
+        %tmp.118 = invoke %tmp.115 %tmp.116(%tmp.117);
+        invoke %tmp.109 %tmp.110(%tmp.112, %tmp.118);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 63 8 ]
+        %tmp.119 = lgetv %dc;
+        %tmp.120 = getv function %tmp.119 :clear;
+        invoke %tmp.119 %tmp.120();
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 65 2 ]
+        %tmp.121 = lgetv %dc;
+        %tmp.122 = getv function %tmp.121 :setColor;
+        %tmp.123 = getm $.Toybox.Application;
+        %tmp.124 = getv function %tmp.123 :getApp;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        %tmp.126 = getv function %tmp.125 :getProperty;
+        %tmp.127 = "ForegroundColor";
+        %tmp.128 = invoke %tmp.125 %tmp.126(%tmp.127);
+        %tmp.129 = getm $.Toybox.Graphics;
+        %tmp.130 = getv %tmp.129 :COLOR_TRANSPARENT;
+        invoke %tmp.121 %tmp.122(%tmp.128, %tmp.130);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 68 3 ]
+        %tmp.131 = lgetv %dc;
+        %tmp.132 = getv function %tmp.131 :drawText;
+        %tmp.134 = lgetv %radius.2;
+        %tmp.136 = lgetv %radius.2;
+        %tmp.137 = 2;
+        %tmp.138 = div %tmp.136 %tmp.137;
+        %tmp.140 = getv ? :fontS;
+        %tmp.142 = lgetv %batteryStr.5;
+        %tmp.143 = getm $.Toybox.Graphics;
+        %tmp.144 = getv %tmp.143 :TEXT_JUSTIFY_CENTER;
+        %tmp.145 = getm $.Toybox.Graphics;
+        %tmp.146 = getv %tmp.145 :TEXT_JUSTIFY_VCENTER;
+        %tmp.147 = bitor %tmp.144 %tmp.146;
+        invoke %tmp.131 %tmp.132(%tmp.134, %tmp.138, %tmp.140, %tmp.142, %tmp.147);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 71 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop" ]
+        %dateStr.25 = local;
+        %tmp.148 = getm $.Toybox.Lang;
+        %tmp.149 = getv function %tmp.148 :format;
+        %tmp.150 = "$1$, $2$ $3$";
+        %tmp.151 = newa 3;
+        %tmp.152 = lgetv %date.3;
+        %tmp.153 = getv %tmp.152 :day_of_week;
+        %tmp.154 = dup %tmp.151;
+        %tmp.155 = aputv %tmp.154 0 %tmp.153;
+        %tmp.156 = lgetv %date.3;
+        %tmp.157 = getv %tmp.156 :month;
+        %tmp.158 = dup %tmp.155;
+        %tmp.159 = aputv %tmp.158 1 %tmp.157;
+        %tmp.160 = lgetv %date.3;
+        %tmp.161 = getv %tmp.160 :day;
+        %tmp.162 = dup %tmp.159;
+        %tmp.163 = aputv %tmp.162 2 %tmp.161;
+        %tmp.164 = invoke %tmp.148 %tmp.149(%tmp.150, %tmp.163);
+        lputv %dateStr.25 %tmp.164;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 72 5 ]
+        %tmp.165 = lgetv %dc;
+        %tmp.166 = getv function %tmp.165 :drawText;
+        %tmp.168 = lgetv %radius.2;
+        %tmp.170 = lgetv %radius.2;
+        %tmp.171 = 1.5;
+        %tmp.172 = mul %tmp.170 %tmp.171;
+        %tmp.174 = getv ? :fontS;
+        %tmp.176 = lgetv %dateStr.25;
+        %tmp.177 = getm $.Toybox.Graphics;
+        %tmp.178 = getv %tmp.177 :TEXT_JUSTIFY_CENTER;
+        %tmp.179 = getm $.Toybox.Graphics;
+        %tmp.180 = getv %tmp.179 :TEXT_JUSTIFY_VCENTER;
+        %tmp.181 = bitor %tmp.178 %tmp.180;
+        invoke %tmp.165 %tmp.166(%tmp.168, %tmp.172, %tmp.174, %tmp.176, %tmp.181);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 75 2 ]
+        %tmp.182 = lgetv %dc;
+        %tmp.183 = getv function %tmp.182 :drawText;
+        %tmp.185 = lgetv %radius.2;
+        %tmp.187 = lgetv %radius.2;
+        %tmp.189 = getv ? :fontLT;
+        %tmp.191 = lgetv %hourStr.6;
+        %tmp.192 = getm $.Toybox.Graphics;
+        %tmp.193 = getv %tmp.192 :TEXT_JUSTIFY_CENTER;
+        %tmp.194 = getm $.Toybox.Graphics;
+        %tmp.195 = getv %tmp.194 :TEXT_JUSTIFY_VCENTER;
+        %tmp.196 = bitor %tmp.193 %tmp.195;
+        invoke %tmp.182 %tmp.183(%tmp.185, %tmp.187, %tmp.189, %tmp.191, %tmp.196);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 78 2 ]
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_2_if_stmt:
+        %tmp.197 = getm $.Toybox.System;
+        %tmp.198 = getv function %tmp.197 :getDeviceSettings;
+        %tmp.199 = invoke %tmp.197 %tmp.198();
+        %tmp.200 = getv %tmp.199 :phoneConnected;
+        %tmp.201 = false;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        bf %tmp.202 @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_2_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_2_if_true:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_53_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 79 3 ]
+        %tmp.203 = lgetv %dc;
+        %tmp.204 = getv function %tmp.203 :setColor;
+        %tmp.205 = getm $.Toybox.Graphics;
+        %tmp.206 = getv %tmp.205 :COLOR_RED;
+        %tmp.207 = getm $.Toybox.Graphics;
+        %tmp.208 = getv %tmp.207 :COLOR_TRANSPARENT;
+        invoke %tmp.203 %tmp.204(%tmp.206, %tmp.208);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 80 3 ]
+        %tmp.209 = lgetv %dc;
+        %tmp.210 = getv function %tmp.209 :drawText;
+        %tmp.212 = lgetv %radius.2;
+        %tmp.213 = 1.5;
+        %tmp.214 = mul %tmp.212 %tmp.213;
+        %tmp.216 = lgetv %radius.2;
+        %tmp.218 = getv ? :icons;
+        %tmp.219 = "b";
+        %tmp.220 = getm $.Toybox.Graphics;
+        %tmp.221 = getv %tmp.220 :TEXT_JUSTIFY_CENTER;
+        %tmp.222 = getm $.Toybox.Graphics;
+        %tmp.223 = getv %tmp.222 :TEXT_JUSTIFY_VCENTER;
+        %tmp.224 = bitor %tmp.221 %tmp.223;
+        invoke %tmp.209 %tmp.210(%tmp.214, %tmp.216, %tmp.218, %tmp.219, %tmp.224);
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_53_stop:
+        goto @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_2_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_78_2_if_end:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 84 5 ]
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_5_if_stmt:
+        %tmp.226 = getv ? :isAwake;
+        bf %tmp.226 @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_5_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_5_if_true:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_18_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 85 9 ]
+        %tmp.227 = self;
+        %tmp.228 = getv function %tmp.227 :drawMarks;
+        %tmp.230 = lgetv %dc;
+        %tmp.232 = lgetv %radius.2;
+        %tmp.234 = lgetv %marks1r1.20;
+        %tmp.236 = lgetv %marks1r2.21;
+        %tmp.238 = lgetv %marks1thick.22;
+        %tmp.240 = lgetv %marks1comp.23;
+        %tmp.242 = lgetv %marks1add.24;
+        invoke %tmp.227 %tmp.228(%tmp.230, %tmp.232, %tmp.234, %tmp.236, %tmp.238, %tmp.240, %tmp.242);
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_18_stop:
+        goto @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_5_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_84_5_if_end:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 87 3 ]
+        %tmp.243 = self;
+        %tmp.244 = getv function %tmp.243 :drawMarks;
+        %tmp.246 = lgetv %dc;
+        %tmp.248 = lgetv %radius.2;
+        %tmp.250 = lgetv %marks5r1.15;
+        %tmp.252 = lgetv %marks5r2.16;
+        %tmp.254 = lgetv %marks5thick.17;
+        %tmp.256 = lgetv %marks5comp.18;
+        %tmp.258 = lgetv %marks5add.19;
+        invoke %tmp.243 %tmp.244(%tmp.246, %tmp.248, %tmp.250, %tmp.252, %tmp.254, %tmp.256, %tmp.258);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 90 6 ]
+        %tmp.259 = self;
+        %tmp.260 = getv function %tmp.259 :drawHand;
+        %tmp.262 = lgetv %dc;
+        %tmp.264 = lgetv %radius.2;
+        %tmp.266 = lgetv %timeMin.7;
+        %tmp.268 = lgetv %lengthMin.9;
+        %tmp.270 = lgetv %widthMin.11;
+        %tmp.272 = lgetv %colorMin.13;
+        invoke %tmp.259 %tmp.260(%tmp.262, %tmp.264, %tmp.266, %tmp.268, %tmp.270, %tmp.272);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 91 8 ]
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_8_if_stmt:
+        %tmp.274 = getv ? :isAwake;
+        bf %tmp.274 @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_8_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_8_if_true:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_21_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 92 9 ]
+        %tmp.275 = self;
+        %tmp.276 = getv function %tmp.275 :drawHand;
+        %tmp.278 = lgetv %dc;
+        %tmp.280 = lgetv %radius.2;
+        %tmp.282 = lgetv %timeSec.8;
+        %tmp.284 = lgetv %lengthSec.10;
+        %tmp.286 = lgetv %widthSec.12;
+        %tmp.288 = lgetv %colorSec.14;
+        invoke %tmp.275 %tmp.276(%tmp.278, %tmp.280, %tmp.282, %tmp.284, %tmp.286, %tmp.288);
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_21_stop:
+        goto @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_8_if_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_91_8_if_end:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 96; ]
+    function onHide() {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 99; ]
+    function onExitSleep() {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_99_27_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 100 5 ]
+        %tmp.1 = true;
+        putv self :isAwake %tmp.1;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_99_27_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 103; ]
+    function onEnterSleep() {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_103_28_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 104 5 ]
+        %tmp.1 = false;
+        putv self :isAwake %tmp.1;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 105 5 ]
+        %tmp.2 = getm $.Toybox.WatchUi;
+        %tmp.3 = getv %tmp.2 :requestUpdate;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_103_28_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 108; ]
+    function drawMarks(dc, radius, r1, r2, thick, markcomp, markadd) {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_108_68_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 109 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_108_68_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_108_68_stop" ]
+        %marks.1 = local;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 110 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Application;
+        %tmp.4 = getv function %tmp.3 :getApp;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getv function %tmp.5 :getProperty;
+        %tmp.7 = "HashmarksColor";
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.8, %tmp.10);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 112 8 ]
+        for @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_test @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_incr @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_init:
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_begin" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_end" ]
+        %i.2 = local;
+        %tmp.11 = getm $.Toybox.Math;
+        %tmp.12 = getv %tmp.11 :PI;
+        %tmp.13 = 6;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        lputv %i.2 %tmp.14;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_test:
+        %tmp.16 = lgetv %i.2;
+        %tmp.18 = lgetv %markcomp;
+        %tmp.19 = lte %tmp.16 %tmp.18;
+        bf %tmp.19 @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_end;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_begin:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_61_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 113 3 ]
+        %tmp.20 = newa 4;
+        %tmp.21 = newa 2;
+        %tmp.23 = lgetv %radius;
+        %tmp.25 = lgetv %r1;
+        %tmp.26 = getm $.Toybox.Math;
+        %tmp.27 = getv function %tmp.26 :sin;
+        %tmp.29 = lgetv %i.2;
+        %tmp.31 = lgetv %thick;
+        %tmp.32 = sub %tmp.29 %tmp.31;
+        %tmp.33 = invoke %tmp.26 %tmp.27(%tmp.32);
+        %tmp.34 = mul %tmp.25 %tmp.33;
+        %tmp.35 = add %tmp.23 %tmp.34;
+        %tmp.36 = dup %tmp.21;
+        %tmp.37 = aputv %tmp.36 0 %tmp.35;
+        %tmp.39 = lgetv %radius;
+        %tmp.41 = lgetv %r1;
+        %tmp.42 = getm $.Toybox.Math;
+        %tmp.43 = getv function %tmp.42 :cos;
+        %tmp.45 = lgetv %i.2;
+        %tmp.47 = lgetv %thick;
+        %tmp.48 = sub %tmp.45 %tmp.47;
+        %tmp.49 = invoke %tmp.42 %tmp.43(%tmp.48);
+        %tmp.50 = mul %tmp.41 %tmp.49;
+        %tmp.51 = sub %tmp.39 %tmp.50;
+        %tmp.52 = dup %tmp.37;
+        %tmp.53 = aputv %tmp.52 1 %tmp.51;
+        %tmp.54 = dup %tmp.20;
+        %tmp.55 = aputv %tmp.54 0 %tmp.53;
+        %tmp.56 = newa 2;
+        %tmp.58 = lgetv %radius;
+        %tmp.60 = lgetv %r2;
+        %tmp.61 = getm $.Toybox.Math;
+        %tmp.62 = getv function %tmp.61 :sin;
+        %tmp.64 = lgetv %i.2;
+        %tmp.66 = lgetv %thick;
+        %tmp.67 = sub %tmp.64 %tmp.66;
+        %tmp.68 = invoke %tmp.61 %tmp.62(%tmp.67);
+        %tmp.69 = mul %tmp.60 %tmp.68;
+        %tmp.70 = add %tmp.58 %tmp.69;
+        %tmp.71 = dup %tmp.56;
+        %tmp.72 = aputv %tmp.71 0 %tmp.70;
+        %tmp.74 = lgetv %radius;
+        %tmp.76 = lgetv %r2;
+        %tmp.77 = getm $.Toybox.Math;
+        %tmp.78 = getv function %tmp.77 :cos;
+        %tmp.80 = lgetv %i.2;
+        %tmp.82 = lgetv %thick;
+        %tmp.83 = sub %tmp.80 %tmp.82;
+        %tmp.84 = invoke %tmp.77 %tmp.78(%tmp.83);
+        %tmp.85 = mul %tmp.76 %tmp.84;
+        %tmp.86 = sub %tmp.74 %tmp.85;
+        %tmp.87 = dup %tmp.72;
+        %tmp.88 = aputv %tmp.87 1 %tmp.86;
+        %tmp.89 = dup %tmp.55;
+        %tmp.90 = aputv %tmp.89 1 %tmp.88;
+        %tmp.91 = newa 2;
+        %tmp.93 = lgetv %radius;
+        %tmp.95 = lgetv %r2;
+        %tmp.96 = getm $.Toybox.Math;
+        %tmp.97 = getv function %tmp.96 :sin;
+        %tmp.99 = lgetv %i.2;
+        %tmp.101 = lgetv %thick;
+        %tmp.102 = add %tmp.99 %tmp.101;
+        %tmp.103 = invoke %tmp.96 %tmp.97(%tmp.102);
+        %tmp.104 = mul %tmp.95 %tmp.103;
+        %tmp.105 = add %tmp.93 %tmp.104;
+        %tmp.106 = dup %tmp.91;
+        %tmp.107 = aputv %tmp.106 0 %tmp.105;
+        %tmp.109 = lgetv %radius;
+        %tmp.111 = lgetv %r2;
+        %tmp.112 = getm $.Toybox.Math;
+        %tmp.113 = getv function %tmp.112 :cos;
+        %tmp.115 = lgetv %i.2;
+        %tmp.117 = lgetv %thick;
+        %tmp.118 = add %tmp.115 %tmp.117;
+        %tmp.119 = invoke %tmp.112 %tmp.113(%tmp.118);
+        %tmp.120 = mul %tmp.111 %tmp.119;
+        %tmp.121 = sub %tmp.109 %tmp.120;
+        %tmp.122 = dup %tmp.107;
+        %tmp.123 = aputv %tmp.122 1 %tmp.121;
+        %tmp.124 = dup %tmp.90;
+        %tmp.125 = aputv %tmp.124 2 %tmp.123;
+        %tmp.126 = newa 2;
+        %tmp.128 = lgetv %radius;
+        %tmp.130 = lgetv %r1;
+        %tmp.131 = getm $.Toybox.Math;
+        %tmp.132 = getv function %tmp.131 :sin;
+        %tmp.134 = lgetv %i.2;
+        %tmp.136 = lgetv %thick;
+        %tmp.137 = add %tmp.134 %tmp.136;
+        %tmp.138 = invoke %tmp.131 %tmp.132(%tmp.137);
+        %tmp.139 = mul %tmp.130 %tmp.138;
+        %tmp.140 = add %tmp.128 %tmp.139;
+        %tmp.141 = dup %tmp.126;
+        %tmp.142 = aputv %tmp.141 0 %tmp.140;
+        %tmp.144 = lgetv %radius;
+        %tmp.146 = lgetv %r1;
+        %tmp.147 = getm $.Toybox.Math;
+        %tmp.148 = getv function %tmp.147 :cos;
+        %tmp.150 = lgetv %i.2;
+        %tmp.152 = lgetv %thick;
+        %tmp.153 = add %tmp.150 %tmp.152;
+        %tmp.154 = invoke %tmp.147 %tmp.148(%tmp.153);
+        %tmp.155 = mul %tmp.146 %tmp.154;
+        %tmp.156 = sub %tmp.144 %tmp.155;
+        %tmp.157 = dup %tmp.142;
+        %tmp.158 = aputv %tmp.157 1 %tmp.156;
+        %tmp.159 = dup %tmp.125;
+        %tmp.160 = aputv %tmp.159 3 %tmp.158;
+        lputv %marks.1 %tmp.160;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 118 3 ]
+        %tmp.161 = lgetv %dc;
+        %tmp.162 = getv function %tmp.161 :fillPolygon;
+        %tmp.164 = lgetv %marks.1;
+        invoke %tmp.161 %tmp.162(%tmp.164);
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_61_stop:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_incr:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 112 ]
+        %tmp.165 = lgetv %i.2;
+        %tmp.167 = lgetv %markadd;
+        %tmp.168 = add %tmp.165 %tmp.167;
+        lputv %i.2 %tmp.168;
+        goto @_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_test;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_112_8_for_end:
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_108_68_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 122; ]
+    function drawHand(dc, radius, time, length, penwidth, color) {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 123 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop" ]
+        %angle.1 = local;
+        %tmp.1 = getm $.Toybox.Math;
+        %tmp.2 = getv %tmp.1 :PI;
+        %tmp.3 = 30;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        %tmp.6 = lgetv %time;
+        %tmp.7 = mul %tmp.4 %tmp.6;
+        %tmp.8 = getm $.Toybox.Math;
+        %tmp.9 = getv %tmp.8 :PI;
+        %tmp.10 = 2;
+        %tmp.11 = div %tmp.9 %tmp.10;
+        %tmp.12 = sub %tmp.7 %tmp.11;
+        lputv %angle.1 %tmp.12;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 124 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop" ]
+        %xPos.2 = local;
+        %tmp.14 = lgetv %radius;
+        %tmp.16 = lgetv %length;
+        %tmp.17 = getm $.Toybox.Math;
+        %tmp.18 = getv function %tmp.17 :cos;
+        %tmp.20 = lgetv %angle.1;
+        %tmp.21 = invoke %tmp.17 %tmp.18(%tmp.20);
+        %tmp.22 = mul %tmp.16 %tmp.21;
+        %tmp.23 = add %tmp.14 %tmp.22;
+        lputv %xPos.2 %tmp.23;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 125 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop" ]
+        %yPos.3 = local;
+        %tmp.25 = lgetv %radius;
+        %tmp.27 = lgetv %length;
+        %tmp.28 = getm $.Toybox.Math;
+        %tmp.29 = getv function %tmp.28 :sin;
+        %tmp.31 = lgetv %angle.1;
+        %tmp.32 = invoke %tmp.28 %tmp.29(%tmp.31);
+        %tmp.33 = mul %tmp.27 %tmp.32;
+        %tmp.34 = add %tmp.25 %tmp.33;
+        lputv %yPos.3 %tmp.34;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 126 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop" ]
+        %endX.4 = local;
+        %tmp.36 = lgetv %radius;
+        %tmp.37 = 1.55;
+        %tmp.39 = lgetv %length;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        %tmp.41 = getm $.Toybox.Math;
+        %tmp.42 = getv function %tmp.41 :cos;
+        %tmp.44 = lgetv %angle.1;
+        %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.44);
+        %tmp.46 = mul %tmp.40 %tmp.45;
+        %tmp.47 = add %tmp.36 %tmp.46;
+        lputv %endX.4 %tmp.47;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 127 8 ]
+        [ "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_start" "_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop" ]
+        %endY.5 = local;
+        %tmp.49 = lgetv %radius;
+        %tmp.50 = 1.55;
+        %tmp.52 = lgetv %length;
+        %tmp.53 = mul %tmp.50 %tmp.52;
+        %tmp.54 = getm $.Toybox.Math;
+        %tmp.55 = getv function %tmp.54 :sin;
+        %tmp.57 = lgetv %angle.1;
+        %tmp.58 = invoke %tmp.54 %tmp.55(%tmp.57);
+        %tmp.59 = mul %tmp.53 %tmp.58;
+        %tmp.60 = add %tmp.49 %tmp.59;
+        lputv %endY.5 %tmp.60;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 128 8 ]
+        %tmp.61 = lgetv %dc;
+        %tmp.62 = getv function %tmp.61 :setColor;
+        %tmp.64 = lgetv %color;
+        %tmp.65 = getm $.Toybox.Graphics;
+        %tmp.66 = getv %tmp.65 :COLOR_TRANSPARENT;
+        invoke %tmp.61 %tmp.62(%tmp.64, %tmp.66);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 129 8 ]
+        %tmp.67 = lgetv %dc;
+        %tmp.68 = getv function %tmp.67 :setPenWidth;
+        %tmp.70 = lgetv %penwidth;
+        invoke %tmp.67 %tmp.68(%tmp.70);
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 130 8 ]
+        %tmp.71 = lgetv %dc;
+        %tmp.72 = getv function %tmp.71 :drawLine;
+        %tmp.74 = lgetv %xPos.2;
+        %tmp.76 = lgetv %yPos.3;
+        %tmp.78 = lgetv %endX.4;
+        %tmp.80 = lgetv %endY.5;
+        invoke %tmp.71 %tmp.72(%tmp.74, %tmp.76, %tmp.78, %tmp.80);
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_122_61_stop:
+    }
+}
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc"; @line = 1; ]
+<init> {
+}

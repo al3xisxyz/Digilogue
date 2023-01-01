@@ -1,0 +1,9 @@
+<properties>
+
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="ForegroundColor" type="number">0xffffff</property>
+    <property id="HashmarksColor" type="number">0xffffff</property>
+	<property id="MinHandColor" type="number">0xffffff</property>
+	<property id="SecHandColor" type="number">0xff0000</property>
+
+</properties>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="1" lineNum="5" parent="globals/Background" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="2" lineNum="7" parent="globals/Background" pc="268435479" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="2" lineNum="8" parent="globals/Background" pc="268435483" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="2" lineNum="12" parent="globals/Background" pc="268435504" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="3" lineNum="15" parent="globals/Background" pc="268435525" symbol="draw"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="3" lineNum="17" parent="globals/Background" pc="268435527" symbol="draw"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueBackground.mc" id="3" lineNum="18" parent="globals/Background" pc="268435580" symbol="draw"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="4" lineNum="7" parent="globals/DigilogueApp" pc="268435593" symbol="&lt;init&gt;"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="5" lineNum="15" parent="globals/DigilogueApp" pc="268435612" symbol="onStart"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="6" lineNum="28" parent="globals/DigilogueApp" pc="268435615" symbol="onSettingsChanged"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="6" lineNum="29" parent="globals/DigilogueApp" pc="268435617" symbol="onSettingsChanged"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="6" lineNum="30" parent="globals/DigilogueApp" pc="268435631" symbol="onSettingsChanged"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="6" lineNum="31" parent="globals/DigilogueApp" pc="268435660" symbol="onSettingsChanged"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="7" lineNum="23" parent="globals/DigilogueApp" pc="268435677" symbol="getInitialView"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="7" lineNum="24" parent="globals/DigilogueApp" pc="268435679" symbol="getInitialView"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="8" lineNum="9" parent="globals/DigilogueApp" pc="268435720" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="8" lineNum="10" parent="globals/DigilogueApp" pc="268435722" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" id="9" lineNum="19" parent="globals/DigilogueApp" pc="268435741" symbol="onStop"/>
+        <entry filename="Rez.mc" id="10" lineNum="1" parent="globals/Rez" pc="268435744" symbol="&lt;init&gt;"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="11" lineNum="9" parent="globals/DigilogueView" pc="268435768" symbol="&lt;init&gt;"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="12" lineNum="99" parent="globals/DigilogueView" pc="268435787" symbol="onExitSleep"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="12" lineNum="100" parent="globals/DigilogueView" pc="268435789" symbol="onExitSleep"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="122" parent="globals/DigilogueView" pc="268435800" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="123" parent="globals/DigilogueView" pc="268435804" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="124" parent="globals/DigilogueView" pc="268435846" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="125" parent="globals/DigilogueView" pc="268435871" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="126" parent="globals/DigilogueView" pc="268435896" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="127" parent="globals/DigilogueView" pc="268435927" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="128" parent="globals/DigilogueView" pc="268435958" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="129" parent="globals/DigilogueView" pc="268435984" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="13" lineNum="130" parent="globals/DigilogueView" pc="268435998" symbol="drawHand"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="15" lineNum="22" parent="globals/DigilogueView" pc="268436019" symbol="onLayout"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="15" lineNum="23" parent="globals/DigilogueView" pc="268436021" symbol="onLayout"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="15" lineNum="24" parent="globals/DigilogueView" pc="268436068" symbol="onLayout"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="15" lineNum="25" parent="globals/DigilogueView" pc="268436115" symbol="onLayout"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="16" lineNum="103" parent="globals/DigilogueView" pc="268436163" symbol="onEnterSleep"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="16" lineNum="104" parent="globals/DigilogueView" pc="268436165" symbol="onEnterSleep"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="16" lineNum="105" parent="globals/DigilogueView" pc="268436175" symbol="onEnterSleep"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="17" lineNum="16" parent="globals/DigilogueView" pc="268436176" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="17" lineNum="17" parent="globals/DigilogueView" pc="268436178" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="17" lineNum="18" parent="globals/DigilogueView" pc="268436196" symbol="initialize"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="108" parent="globals/DigilogueView" pc="268436207" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="109" parent="globals/DigilogueView" pc="268436211" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="110" parent="globals/DigilogueView" pc="268436211" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="112" parent="globals/DigilogueView" pc="268436264" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="113" parent="globals/DigilogueView" pc="268436292" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="19" lineNum="118" parent="globals/DigilogueView" pc="268436628" symbol="drawMarks"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="32" parent="globals/DigilogueView" pc="268436653" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="33" parent="globals/DigilogueView" pc="268436657" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="34" parent="globals/DigilogueView" pc="268436674" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="36" parent="globals/DigilogueView" pc="268436693" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="37" parent="globals/DigilogueView" pc="268436741" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="38" parent="globals/DigilogueView" pc="268436764" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="39" parent="globals/DigilogueView" pc="268436816" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="41" parent="globals/DigilogueView" pc="268436860" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="42" parent="globals/DigilogueView" pc="268436870" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="43" parent="globals/DigilogueView" pc="268436880" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="44" parent="globals/DigilogueView" pc="268436890" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="45" parent="globals/DigilogueView" pc="268436900" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="46" parent="globals/DigilogueView" pc="268436910" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="47" parent="globals/DigilogueView" pc="268436920" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="48" parent="globals/DigilogueView" pc="268436951" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="50" parent="globals/DigilogueView" pc="268436982" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="51" parent="globals/DigilogueView" pc="268436992" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="52" parent="globals/DigilogueView" pc="268436996" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="53" parent="globals/DigilogueView" pc="268437003" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="54" parent="globals/DigilogueView" pc="268437029" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="55" parent="globals/DigilogueView" pc="268437049" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="56" parent="globals/DigilogueView" pc="268437059" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="57" parent="globals/DigilogueView" pc="268437063" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="58" parent="globals/DigilogueView" pc="268437070" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="59" parent="globals/DigilogueView" pc="268437096" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="62" parent="globals/DigilogueView" pc="268437116" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="63" parent="globals/DigilogueView" pc="268437169" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="65" parent="globals/DigilogueView" pc="268437181" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="68" parent="globals/DigilogueView" pc="268437234" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="71" parent="globals/DigilogueView" pc="268437291" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="72" parent="globals/DigilogueView" pc="268437367" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="75" parent="globals/DigilogueView" pc="268437424" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="78" parent="globals/DigilogueView" pc="268437475" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="79" parent="globals/DigilogueView" pc="268437502" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="80" parent="globals/DigilogueView" pc="268437538" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="84" parent="globals/DigilogueView" pc="268437601" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="85" parent="globals/DigilogueView" pc="268437612" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="87" parent="globals/DigilogueView" pc="268437641" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="90" parent="globals/DigilogueView" pc="268437667" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="91" parent="globals/DigilogueView" pc="268437691" symbol="onUpdate"/>
+        <entry filename="/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" id="20" lineNum="92" parent="globals/DigilogueView" pc="268437702" symbol="onUpdate"/>
+        <entry filename="Rez.mc" id="21" lineNum="21" parent="globals/Rez/Layouts" pc="268437730" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="21" lineNum="23" parent="globals/Rez/Layouts" pc="268437742" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="21" lineNum="24" parent="globals/Rez/Layouts" pc="268437770" symbol="WatchFace"/>
+        <entry filename="Rez.mc" id="21" lineNum="26" parent="globals/Rez/Layouts" pc="268437933" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="38" symbol="ColorPurple"/>
+        <entry field="true" id="22" symbol="id_font_CaviarDreams"/>
+        <entry id="7" module="true" symbol="globals/Rez/Menus"/>
+        <entry field="true" id="19" symbol="&lt;globals/DigilogueView/&lt;&gt;icons&gt;"/>
+        <entry field="true" id="24" symbol="id_font_icons"/>
+        <entry field="true" id="17" symbol="&lt;globals/DigilogueView/&lt;&gt;fontLT&gt;"/>
+        <entry field="true" id="33" symbol="ColorGreen"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry field="true" id="41" symbol="ColorYellow"/>
+        <entry field="true" id="39" symbol="ColorRed"/>
+        <entry field="true" id="32" symbol="ColorDarkRed"/>
+        <entry field="true" id="35" symbol="ColorLightYellow"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="28" symbol="ColorBlue"/>
+        <entry field="true" id="25" symbol="AppName"/>
+        <entry field="true" id="23" symbol="id_font_CaviarDreams_LThin"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="36" symbol="ColorOrange"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="20" symbol="&lt;globals/DigilogueView/&lt;&gt;isAwake&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="44" symbol="MinHandColorTitle"/>
+        <entry id="14" module="true" symbol="Menus"/>
+        <entry field="true" id="30" symbol="ColorDarkGray"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="43" symbol="HashmarksColorTitle"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry field="true" id="18" symbol="&lt;globals/DigilogueView/&lt;&gt;fontS&gt;"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="40" symbol="ColorWhite"/>
+        <entry field="true" id="29" symbol="ColorDarkBlue"/>
+        <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="27" symbol="ColorBlack"/>
+        <entry field="true" id="11" symbol="gDeviceSettings"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="16" method="true" symbol="drawMarks"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="45" symbol="SecHandColorTitle"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="15" method="true" symbol="drawHand"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="21" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="31" symbol="ColorDarkGreen"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="26" symbol="BackgroundColorTitle"/>
+        <entry id="10" object="true" symbol="DigilogueView"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="34" symbol="ColorLightGray"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389347" symbol="color"/>
+        <entry field="true" id="37" symbol="ColorPink"/>
+        <entry field="true" id="42" symbol="ForegroundColorTitle"/>
+        <entry id="13" module="true" symbol="Layouts"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="12" symbol="gSettingsChanged"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="9" object="true" symbol="DigilogueApp"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435523" name="dictionary" stackId="1" startPc="268435483"/>
+        <entry arg="true" endPc="268435592" name="dc" stackId="1" startPc="268435525"/>
+        <entry arg="true" endPc="268436018" name="dc" stackId="1" startPc="268435800"/>
+        <entry arg="true" endPc="268436018" name="radius" stackId="2" startPc="268435800"/>
+        <entry arg="true" endPc="268436018" name="time" stackId="3" startPc="268435800"/>
+        <entry arg="true" endPc="268436018" name="length" stackId="4" startPc="268435800"/>
+        <entry arg="true" endPc="268436018" name="penwidth" stackId="5" startPc="268435800"/>
+        <entry arg="true" endPc="268436018" name="color" stackId="6" startPc="268435800"/>
+        <entry endPc="268436017" name="angle" stackId="7" startPc="268435804"/>
+        <entry endPc="268436017" name="xPos" stackId="8" startPc="268435804"/>
+        <entry endPc="268436017" name="yPos" stackId="9" startPc="268435804"/>
+        <entry endPc="268436017" name="endX" stackId="10" startPc="268435804"/>
+        <entry endPc="268436017" name="endY" stackId="11" startPc="268435804"/>
+        <entry arg="true" endPc="268436162" name="dc" stackId="1" startPc="268436019"/>
+        <entry arg="true" endPc="268436652" name="dc" stackId="1" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="radius" stackId="2" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="r1" stackId="3" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="r2" stackId="4" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="thick" stackId="5" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="markcomp" stackId="6" startPc="268436207"/>
+        <entry arg="true" endPc="268436652" name="markadd" stackId="7" startPc="268436207"/>
+        <entry endPc="268436651" name="marks" stackId="8" startPc="268436211"/>
+        <entry endPc="268436651" name="i" stackId="9" startPc="268436292"/>
+        <entry arg="true" endPc="268437729" name="dc" stackId="1" startPc="268436653"/>
+        <entry endPc="268437728" name="clockTime" stackId="2" startPc="268436657"/>
+        <entry endPc="268437728" name="radius" stackId="3" startPc="268436657"/>
+        <entry endPc="268437728" name="date" stackId="4" startPc="268436657"/>
+        <entry endPc="268437728" name="battery" stackId="5" startPc="268436657"/>
+        <entry endPc="268437728" name="batteryStr" stackId="6" startPc="268436657"/>
+        <entry endPc="268437728" name="hourStr" stackId="7" startPc="268436657"/>
+        <entry endPc="268437728" name="timeMin" stackId="8" startPc="268436657"/>
+        <entry endPc="268437728" name="timeSec" stackId="9" startPc="268436657"/>
+        <entry endPc="268437728" name="lengthMin" stackId="10" startPc="268436657"/>
+        <entry endPc="268437728" name="lengthSec" stackId="11" startPc="268436657"/>
+        <entry endPc="268437728" name="widthMin" stackId="12" startPc="268436657"/>
+        <entry endPc="268437728" name="widthSec" stackId="13" startPc="268436657"/>
+        <entry endPc="268437728" name="colorMin" stackId="14" startPc="268436657"/>
+        <entry endPc="268437728" name="colorSec" stackId="15" startPc="268436657"/>
+        <entry endPc="268437728" name="marks5r1" stackId="16" startPc="268436657"/>
+        <entry endPc="268437728" name="marks5r2" stackId="17" startPc="268436657"/>
+        <entry endPc="268437728" name="marks5thick" stackId="18" startPc="268436657"/>
+        <entry endPc="268437728" name="marks5comp" stackId="19" startPc="268436657"/>
+        <entry endPc="268437728" name="marks5add" stackId="20" startPc="268436657"/>
+        <entry endPc="268437728" name="marks1r1" stackId="21" startPc="268436657"/>
+        <entry endPc="268437728" name="marks1r2" stackId="22" startPc="268436657"/>
+        <entry endPc="268437728" name="marks1thick" stackId="23" startPc="268436657"/>
+        <entry endPc="268437728" name="marks1comp" stackId="24" startPc="268436657"/>
+        <entry endPc="268437728" name="marks1add" stackId="25" startPc="268436657"/>
+        <entry endPc="268437728" name="dateStr" stackId="26" startPc="268436657"/>
+        <entry arg="true" endPc="268437959" name="dc" stackId="1" startPc="268437730"/>
+        <entry endPc="268437959" name="rez_cmp_local_custom_drawable_14327404692100749535" stackId="2" startPc="268437742"/>
+        <entry endPc="268437959" name="rez_cmp_local_text_TimeLabel" stackId="3" startPc="268437742"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGreen"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightYellow"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MinHandColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPink"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorGreen"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPurple"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="id_font_CaviarDreams_LThin"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorOrange"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="id_font_icons"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorYellow"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="HashmarksColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="id_font_CaviarDreams"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SecHandColorTitle"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Background" offset="174" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/DigilogueApp" offset="229" parentId="globals" symbolId="DigilogueApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="308" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/DigilogueView" offset="387" parentId="globals" symbolId="DigilogueView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="530" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="569" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="608" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="639" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="694" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="893" parentId="Rez" symbolId="JsonData" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="Background" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="initialize" parent="Background" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435592" name="draw" parent="Background" startPc="268435525">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435611" name="&lt;init&gt;" parent="DigilogueApp" startPc="268435593">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435614" name="onStart" parent="DigilogueApp" startPc="268435612">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435676" name="onSettingsChanged" parent="DigilogueApp" startPc="268435615">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435719" name="getInitialView" parent="DigilogueApp" startPc="268435677">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435740" name="initialize" parent="DigilogueApp" startPc="268435720">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435743" name="onStop" parent="DigilogueApp" startPc="268435741">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435767" name="&lt;init&gt;" parent="Rez" startPc="268435744">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435786" name="&lt;init&gt;" parent="DigilogueView" startPc="268435768">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435799" name="onExitSleep" parent="DigilogueView" startPc="268435787">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436018" name="drawHand" parent="DigilogueView" startPc="268435800">
+            <param id="dc"/>
+            <param id="radius"/>
+            <param id="time"/>
+            <param id="length"/>
+            <param id="penwidth"/>
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="DigilogueView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436162" name="onLayout" parent="DigilogueView" startPc="268436019">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436175" name="onEnterSleep" parent="DigilogueView" startPc="268436163">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436206" name="initialize" parent="DigilogueView" startPc="268436176">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="DigilogueView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436652" name="drawMarks" parent="DigilogueView" startPc="268436207">
+            <param id="dc"/>
+            <param id="radius"/>
+            <param id="r1"/>
+            <param id="r2"/>
+            <param id="thick"/>
+            <param id="markcomp"/>
+            <param id="markadd"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437729" name="onUpdate" parent="DigilogueView" startPc="268436653">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437959" name="WatchFace" parent="Layouts" startPc="268437730">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

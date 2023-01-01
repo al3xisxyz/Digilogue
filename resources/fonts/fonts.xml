@@ -1,0 +1,8 @@
+<resources>
+	<font id="id_font_CaviarDreams" filename="CaviarDreams.fnt" antialias="true" />
+	<!-- <font id="id_font_CaviarDreams_Num" filename="CaviarDreams.fnt" filter="0123456789:" antialias="true" /> -->
+	<!-- <font id="id_font_CaviarDreams_Large" filename="CaviarDreams-large.fnt" antialias="true" /> -->
+	<!-- <font id="id_font_CaviarDreams_Small" filename="CaviarDreams-small.fnt" antialias="true" /> -->
+	<font id="id_font_CaviarDreams_LThin" filename="CaviarDreams-LThin.fnt" antialias="true" />
+	<font id="id_font_icons" filename="icons.fnt" antialias="true" />
+</resources>

@@ -1,0 +1,67 @@
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 4; @position = 4; ]
+var gDeviceSettings;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 5; @position = 4; ]
+var gSettingsChanged = true;
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 7; ]
+class DigilogueApp extends Application.AppBase{
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 9; ]
+    function initialize() as Void {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_9_26_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" 10 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_9_26_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 15; ]
+    function onStart(state) {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 19; ]
+    function onStop(state) {
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 23; ]
+    function getInitialView() {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_23_30_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" 24 8 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :DigilogueView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_23_30_stop:
+    }
+    [ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 28; ]
+    function onSettingsChanged() {
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_28_33_start:
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" 29 8 ]
+        %tmp.1 = getm $;
+        %tmp.2 = true;
+        putv %tmp.1 :gSettingsChanged %tmp.2;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" 30 8 ]
+        %tmp.3 = getm $;
+        %tmp.5 = getv ? :System;
+        %tmp.6 = getv function %tmp.5 :getDeviceSettings;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        putv %tmp.3 :gDeviceSettings %tmp.7;
+[ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc" 31 8 ]
+        %tmp.8 = getm $.Toybox.WatchUi;
+        %tmp.9 = getv function %tmp.8 :requestUpdate;
+        invoke %tmp.8 %tmp.9();
+_home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueApp_mc_28_33_stop:
+    }
+}
+[ @file = "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueApp.mc"; @line = 1; ]
+<init> {
+}
