@@ -33,7 +33,7 @@ class DigilogueView extends Ui.WatchFace {
     	var clockTime = Sys.getClockTime();
     	var radius = dc.getWidth() / 2;
 		
-		var date = Calendar.info(Time.now(), Time.FORMAT_LONG);    	
+		var date = Calendar.info(Time.now(), Time.FORMAT_MEDIUM);    	
     	var battery = Sys.getSystemStats().battery;
  		var batteryStr = Lang.format("$1$%", [battery.format("%02d")]);
 		var hourStr = Lang.format("$1$", [date.hour]); //[info.hour.format("%02d")]

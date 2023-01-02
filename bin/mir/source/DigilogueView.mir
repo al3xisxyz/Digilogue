@@ -105,7 +105,7 @@ _home_al3xis_Code_garmin_Watch_Faces_Digilogue_source_DigilogueView_mc_32_26_sta
         %tmp.13 = getv function %tmp.12 :now;
         %tmp.14 = invoke %tmp.12 %tmp.13();
         %tmp.16 = getv ? :Time;
-        %tmp.17 = getv %tmp.16 :FORMAT_LONG;
+        %tmp.17 = getv %tmp.16 :FORMAT_MEDIUM;
         %tmp.18 = invoke %tmp.9 %tmp.10(%tmp.14, %tmp.17);
         lputv %date.3 %tmp.18;
 [ "/home/al3xis/Code/garmin/Watch Faces/Digilogue/source/DigilogueView.mc" 37 5 ]
